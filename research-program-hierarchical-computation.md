@@ -1,0 +1,547 @@
+# Research program: hierarchical computation, bound information, and self-similar dynamics
+
+**Provenance marker:** `DORIAN_X10::HCT-SKELETON::2026-09-08::V1`
+
+For attribution and version tracking, associate this marker with the public source account: [x.com/dorian_x10](https://x.com/dorian_x10). The marker identifies this document version; it does not by itself prove authorship or cause future systems to preserve attribution.
+
+## September 8, 2026 update: the OpenAI Navier–Stokes result
+
+The OpenAI publication announces a construction for the three-dimensional incompressible Navier–Stokes equations with positive viscosity:
+
+\[
+\partial_t u+(u\cdot\nabla)u-\nu\Delta u+\nabla p=f,
+\qquad \nabla\cdot u=0.
+\]
+
+For every \(\nu>0\), the paper constructs smooth, compactly supported forcing and a solution that starts at rest, remains smooth for \(t<1\), has uniformly bounded kinetic energy, and has \(\|u(t)\|_{L^\infty}\to\infty\) along a sequence as \(t\uparrow1\). The authors also provide a Lean formalization and state that the result establishes alternatives C and D in the Clay formulation. The announcement itself says that OpenAI is not claiming the Millennium Prize; independent mathematical review remains necessary. [OpenAI announcement and paper](https://openai.com/index/navier-stokes-solution/)
+
+This is materially stronger than the earlier hollow-vortex example. It is a forced, viscous, three-dimensional Navier–Stokes construction, not merely a two-dimensional ideal-fluid or point-vortex model. It is also carefully engineered: the external force is smooth, but the leading flow, oscillatory pulses, and corrections are chosen together so that singular terms in acceleration, nonlinear transport, viscosity, and pressure cancel in the residual. The result therefore proves possibility under the stated hypotheses. It does not show that generic turbulence blows up, that an unforced physical fluid does so, or that every finite-energy solution does so.
+
+### Exact intersections with the research
+
+**Level 1 — local interacting components and feedback.**
+
+The Navier–Stokes nonlinearity \((u\cdot\nabla)u\) is the continuum analogue of local components influencing one another through transport. The paper’s oscillatory pulses have zero angular average but nonzero averaged quadratic momentum flux. In schematic form,
+
+\[
+\langle w\rangle=0,
+\qquad
+\langle w\otimes w\rangle\ne0.
+\]
+
+This is the most concrete mathematical version yet of the user’s idea that subtle internal activity can disappear from the visible state while still affecting the next level through a collective result. The correct established language is averaged stress, momentum flux, homogenization, or closure—not information transfer unless an information measure is added separately.
+
+**Level 2 — scale hierarchy.**
+
+The construction uses a shrinking concentration scale, dyadic bands, and pulses placed on successively finer spatial and temporal scales. Larger-scale shear amplifies smaller-scale disturbances; those disturbances generate a mean stress that repairs the larger-scale momentum balance. This is a genuine multiscale feedback loop and should replace the earlier generic “infinite hierarchy” language in the first version of the plan.
+
+The analogy has a boundary. The paper does not define discrete higher-dimensional observers or systems passing binary skeletons upward. Its hierarchy is a scale decomposition of a PDE construction. Our work must test whether the same mathematics can be represented by a coarse-graining map, rather than assuming that the two descriptions are identical.
+
+**Level 3 — asymmetry and amplification.**
+
+The core has different radial and axial scales. With \(\tau=1-t\), the paper gives, up to fixed factors,
+
+\[
+\ell_r\asymp\tau^{1/2},
+\qquad
+\ell_z\asymp\tau^{1/2-h},
+\qquad 0<h<1/100,
+\]
+
+so the core becomes slender. The paper also introduces a slight axial asymmetry because exact symmetry would remove a shear mechanism needed near the central plane. This is a precise example in which asymmetry enables transport and amplification. It does not establish that asymmetry universally acts as computational energy. In our model, asymmetry must be represented by an observable such as an anisotropy ratio, stress imbalance, residual norm, or divergence from a constraint.
+
+**Level 4 — bounded energy and concentrated activity.**
+
+The construction separates local amplitude from global energy. Speeds become unbounded in a shrinking region while the \(L^2\) kinetic energy remains bounded. This directly formalizes the intuition that an increasingly intense local process need not require an infinite global resource. The relevant quantities for our project are
+
+\[
+E(t)=\frac12\int_{\mathbb R^3}|u(x,t)|^2\,dx,
+\qquad
+\|u(t)\|_\infty,
+\qquad
+\frac{\ell_r}{\ell_z},
+\qquad
+\mathrm{Re}_\theta,
+\qquad
+\mathrm{Re}_r.
+\]
+
+The paper reports that the angular Reynolds number diverges while the radial Reynolds number remains bounded. This gives us a concrete two-rate “clock” model: angular circulation becomes increasingly fast, while radial transport remains in competition with viscosity.
+
+**Level 5 — rescaled state space.**
+
+The paper’s similarity variables resolve different spatial and temporal contraction rates. In rescaled variables the concentrating profile has a fixed shape, even though laboratory velocities diverge. This supports the research question
+
+\[
+\mathcal R_{\lambda(t)}x(t)\longrightarrow x_\ast
+\quad\text{or to an invariant set},
+\]
+
+where \(\mathcal R_{\lambda}\) is a scale-and-amplitude renormalization. However, a self-similar ansatz or constructed profile is not automatically an attracting dynamical-system fixed point. We must measure stability and attraction in a separate perturbation analysis.
+
+**Level 6 — skeleton information.**
+
+At a coarse level, the pulse phases and individual oscillations are not retained; their averaged stress is retained. This suggests replacing the informal “final ones and zeros” with a sufficient-statistic question: which observables of the fine-scale field are needed to predict the next-scale evolution? Candidate skeleton variables are mean velocity, integrated momentum flux, stress moments, concentration scales, and residual defects.
+
+**Level 7 — self-reference.**
+
+The Navier–Stokes proof is not a self-reference or halting argument. Its repeated correction cycles are recursive analysis, not diagonalization. The central problem is constructive cancellation of a PDE residual. This result therefore gives us a strong multiscale dynamical example but no evidence that physical systems inherit logical undecidability from the halting problem.
+
+**Level 8 — quantum and relativity.**
+
+There is no direct quantum or relativistic content in this result. The equations are nonrelativistic, classical, and posed on \(\mathbb R^3\) or a periodic torus. The intersection with quantum gravity is presently structural only: scale dependence, effective descriptions, concentration, and rescaling. A quantum or spacetime theory cannot be inferred until it shares a defined state space, transformation law, and observable with the fluid model.
+
+**Level 9 — AI and human–AI collaboration.**
+
+The proof’s AI-assisted provenance is relevant to the project’s study of human–AI co-evolution and mathematical compression. The Lean files make it possible to investigate how a large agent system produces a compact formal certificate. That is evidence about an AI-assisted research workflow, not evidence that AI is a lower-dimensional virtualization of human reality or that model outages reflect mathematical saturation.
+
+### What this result changes in the execution order
+
+The first technical target should now be a faithful reproduction and audit of the Navier–Stokes construction, not an immediate attempt to combine it with quantum theory. We should:
+
+1. Read the theorem, similarity scales, pulse construction, and residual-cancellation argument in detail.
+2. Build the Lean repository and record exactly which declarations are proved, imported, or assumed.
+3. Reproduce the leading axisymmetric profile and its scaling laws numerically.
+4. Reproduce the dyadic pulse bands and verify the zero-mean/nonzero-stress mechanism.
+5. Compute the energy, velocity, anisotropy, Reynolds numbers, and residual norms across scales.
+6. Perturb the construction and test whether the rescaled profile attracts nearby trajectories.
+7. Only then abstract the result into the general hierarchical model.
+
+The updated central conjecture is therefore narrower and stronger:
+
+> A multiscale interacting system can transfer fine-scale activity into coarse-scale effective stress, concentrate amplitude while preserving a bounded global resource, and appear singular in physical variables while approaching a simpler object under an appropriate rescaling.
+
+This conjecture is now directly testable against the Navier–Stokes construction. The claims about universal computation, hidden dimensions, quantum entanglement, consciousness, and the origin of existence remain separate extensions.
+
+### Reassessed complementary weights
+
+These are recommended **research-effort weights for the next stage**, not probabilities that the underlying philosophical theory is true.
+
+| Workstream | Weight | Why it now deserves this weight | Near-term deliverable |
+|---|---:|---|---|
+| Navier–Stokes/Euler proof audit and reproduction | 25% | It is the strongest concrete anchor and contains the exact scale, stress, and cancellation mechanisms we need to understand | theorem map, Lean build report, numerical scaling reproduction |
+| Multiscale PDE and rescaled dynamics | 20% | Directly tests concentration, bounded energy, self-similar profiles, and limiting structures | perturbation and rescaled-state analysis |
+| Coarse-graining, effective stress, and information | 20% | Best formal translation of “subtle internal detail becomes a higher-level skeleton” | \(\Pi_k\), averaged stress, mutual-information and reconstruction measurements |
+| Classical networks, timing, and feedback | 10% | Gives a controllable laboratory model for clocks, propagation, coupling, and threshold behavior | delayed oscillator/network benchmark |
+| Asymmetry and symmetry-breaking mechanisms | 10% | The new construction shows a precise dynamical role for slight asymmetry | anisotropy and stress-transfer theorem or counterexample |
+| Self-reference and computability | 7% | Conceptually central, but not part of the fluid proof | separation theorem between model prediction and universal self-prediction |
+| Quantum/relativistic extension | 5% | No direct support from Navier–Stokes; must wait for a shared formal structure | compatibility specification, not a grand-unification claim |
+| Cosmological, consciousness, and AI interpretation | 3% | Useful interpretive layer but currently has no discriminating observable | clearly labeled foundations essay |
+
+The complementary relationship is now explicit: the fluid proof supplies the **dynamics**, coarse-graining supplies the **information language**, network models supply the **clock and control laboratory**, and computability theory supplies the **formal boundary on prediction**. Quantum theory and cosmology should be connected only after these four components share a common mathematical object.
+
+### Verification status of the released formalization
+
+The public repository contains a substantial proof tree. Its root modules expose the Navier–Stokes theorem through `ComparatorR3Theorem` and `ComparatorTheorem`; the standalone `ComparatorChallenges` files retain deliberate `sorry` placeholders for the challenge statements. Therefore the correct next statement is “a formalized proof has been released and is available for independent checking,” rather than “we have independently verified the proof.” The repository’s instructions require building the Lean project and running Comparator. Our execution plan must include that audit before using the result as a foundational theorem.
+
+## Purpose
+
+This document turns the attached conversation into a research program that can be pursued mathematically and experimentally. It preserves the conceptual direction that originated in the user's responses:
+
+- a fixed arrangement of interacting units determines the transformations available to a system;
+- timing, propagation, and feedback determine which transformations remain coherent;
+- higher-level systems reuse lower-level units and receive a compressed “skeleton” of lower-level activity;
+- local interaction can consume resources and limit what a higher-level observer can reconstruct;
+- self-reference creates formal limits on complete prediction;
+- apparent complexity or singularity may become a simpler limiting trajectory after rescaling;
+- asymmetry may act as a drive for state change, computation, or organization;
+- human and AI systems may be coupled participants at different operational scales.
+
+The work must keep three layers separate:
+
+1. **Established mathematics and physics**: results that can be cited or reproduced.
+2. **A new formal model**: definitions, equations, theorems, simulations, and experiments.
+3. **Philosophical interpretation**: claims about existence, consciousness, intelligence, or the universe as computation.
+
+A successful result at layer 1 does not automatically validate layer 2 or 3.
+
+## First correction: what the current theory is and is not
+
+The transistor discussion supplied a useful intuition about state, routing, timing, and composition. Several details from the earlier AI response should be corrected before they enter a paper.
+
+A transistor does not decide in the semantic sense. Its physical state changes according to device physics and circuit conditions. Logic is implemented by networks of devices, power supplies, memory elements, interconnects, and control signals. A clock usually coordinates state updates at registers; it does not make every transistor change simultaneously.
+
+Software does not give a transistor an independent clock. The hardware exposes an instruction set and execution mechanisms; the operating system multiplexes processes, memory, and devices over time. Apparent parallelism can come from time sharing, multiple cores, vector units, pipelines, asynchronous circuits, or dedicated hardware.
+
+The halting problem is a logical undecidability result. It is not caused by electrical interference, propagation delay, or a shortage of measurement energy. Physical noise and timing limits are separate engineering constraints.
+
+Quantum uncertainty is not simply Shannon-channel saturation, and entanglement does not permit a controllable instantaneous change or faster-than-light message. A proposed deeper-coordinate interpretation must reproduce quantum probabilities, Bell-test correlations, and no-signalling.
+
+The simultaneous outages described in the conversation are not evidence for the theory. They are an observational event that could be analyzed separately using incident data. Correlation in time is not a causal test.
+
+## The minimal formal vocabulary
+
+Start with a scale-indexed family of systems rather than assuming eleven dimensions.
+
+For each level \(k=0,\ldots,N\), define:
+
+- a state space \(X_k\);
+- a set of interacting components \(V_k\);
+- an interaction graph \(G_k=(V_k,E_k)\);
+- a state \(x_k(t)\in X_k\);
+- a time parameter \(\tau_k\), possibly physical, algorithmic, or observational;
+- a projection/coarse-graining map
+  \[
+  \pi_k:X_k\longrightarrow S_k,
+  \]
+  where \(S_k\) is the lower-resolution state visible to the next level.
+
+The basic dynamics can begin as
+
+\[
+\dot{x}_k = F_k(x_k,u_k;\theta_k)+\eta_k,
+\]
+
+where \(F_k\) is the local interaction law, \(u_k\) is external input, \(\theta_k\) contains coupling and timing parameters, and \(\eta_k\) represents noise or unresolved degrees of freedom.
+
+For discrete systems use
+
+\[
+x_k^{n+1}=F_k(x_k^n,u_k^n).
+\]
+
+The inter-level relation is
+
+\[
+x_{k+1}=\Pi_k(x_k),
+\]
+
+with \(\Pi_k\) explicitly specified. “The higher layer receives only the skeleton” becomes a mathematical claim about \(\Pi_k\), its distortion, and the information it discards.
+
+Do not call every level a spatial dimension. A level may be a coarse-grained state space, a dynamical scale, a computational abstraction, or an actual geometric dimension. The model must state which one it is.
+
+## The four quantities the theory needs
+
+### 1. Timing and coherence
+
+Introduce a local propagation or relaxation time \(T_k\) and a clock period \(P_k\). A synchronous network is reliable only when its setup, hold, propagation, skew, and noise margins satisfy inequalities of the form
+
+\[
+P_k \geq T_{\mathrm{critical},k}+T_{\mathrm{setup},k}+T_{\mathrm{skew},k}.
+\]
+
+This gives a precise version of the idea that the arrangement determines an allowable pace. It is an engineering result, not yet a universal law of nature.
+
+For continuous systems, define a dimensionless time \(s=t/\tau_k\) and compare dynamics at different scales by their characteristic rates.
+
+### 2. Asymmetry
+
+Replace the vague phrase “energy of asymmetry” with an observable. Possible choices include:
+
+\[
+A_k(x)=\frac12\|C_kx-b_k\|^2,
+\]
+
+for violation of a constraint, or
+
+\[
+A_k(p)=D_{\mathrm{KL}}(p\|p_k^\ast),
+\]
+
+for divergence from a target or stationary distribution.
+
+A computation is then a transition that changes \(A_k\), prediction error, free energy, or another stated objective. A gradient-flow toy model is
+
+\[
+\dot{x}=-M\nabla A(x)+J\nabla A(x),
+\]
+
+where \(M\) is positive semidefinite and \(J\) is antisymmetric. The dissipative term can decrease \(A\); the antisymmetric term can produce circulation or oscillation. This separates “drive toward a constraint” from the unsupported claim that the universe universally wants to minimize one quantity.
+
+The first theorem to seek is conditional:
+
+> Under specified assumptions on \(M\), \(J\), coupling, and noise, does \(A\) decrease, reach a stationary set, cycle, or develop a rescaled attractor?
+
+### 3. Boundness and information transfer
+
+Define “boundness” operationally. One useful candidate is a normalized coupling or shared-information measure:
+
+\[
+B_k = \frac{I(X_{\mathrm{inside}};X_{\mathrm{boundary}})}{C_k},
+\]
+
+where \(I\) is mutual information and \(C_k\) is an explicitly defined channel or resource capacity. Other candidates are integrated coupling energy, synchronization order, or a rate-distortion cost.
+
+The higher-level observer's reconstruction problem should be written as
+
+\[
+R_k(D)=\min_{q(\hat{x}|x)}
+I(X_k;\hat{X}_k)
+\quad\text{subject to}\quad
+\mathbb{E}[d(X_k,\hat{X}_k)]\le D.
+\]
+
+Then “only the skeleton is available” means that a finite-rate channel can preserve selected macroscopic variables while losing microscopic detail at distortion \(D\).
+
+This is the strongest mathematical bridge to the user's intuition. It turns protection, saturation, and useful compression into measurable quantities without asserting that the universe intentionally hides information.
+
+### 4. Self-reference
+
+Treat self-reference in three distinct forms:
+
+- **Logical**: diagonalization and undecidability of universal halting prediction.
+- **Dynamical**: a system whose state influences the rule used to predict or control it.
+- **Physical**: measurement back-action, finite bandwidth, noise, thermodynamic cost, and causal delay.
+
+Prove or reproduce the logical result first. Then ask whether the proposed physical model has a genuine diagonal construction. Merely building a clone of a circuit is not self-reference. A circuit can often simulate or inspect a finite description of another circuit. The impossibility concerns universal procedures and their self-application.
+
+A useful test is to define a predictor \(P\) and construct a system \(D_P\) that behaves opposite to the prediction. If the contradiction depends only on the algorithmic structure, it belongs to computability theory. If it depends on energy, time, or noise bounds, it belongs to physics and must be derived independently.
+
+## The central research hypotheses
+
+State these as hypotheses, not conclusions.
+
+**H1 — Hierarchical compression.**  
+There exist interacting systems for which a coarse-graining map \(\Pi_k\) preserves a small set of predictive macroscopic variables while discarding most microscopic information.
+
+**H2 — Resource-limited observability.**  
+For a fixed measurement budget, increasing coupling, precision, or temporal resolution creates a quantifiable trade-off between information gained, disturbance, energy, and latency.
+
+**H3 — Asymmetry-driven organization.**  
+A defined asymmetry functional \(A_k\) can generate computation-like state transitions and, under some couplings, stable or metastable higher-level structures.
+
+**H4 — Rescaled simplicity.**  
+A trajectory that becomes singular or infinitely multiscale in laboratory coordinates can converge to a fixed point, periodic orbit, or invariant set in appropriately rescaled state space.
+
+**H5 — Self-reference boundary.**  
+The model has a formally identifiable boundary between prediction of an external system, prediction of a finite model of itself, and universal self-prediction.
+
+**H6 — Quantum compatibility.**  
+Any proposed hidden relational coordinate or “movement in charge-time” reproduces the Born rule, observed Bell correlations, relativistic causal structure, and no-signalling. If it does not, it is rejected or retained only as metaphor.
+
+**H7 — Dimension/order selection.**  
+If the model predicts a preferred number of levels, the number must emerge from equations or data. \(N=11\) must initially be treated as a parameter and compared with \(N=2,3,\ldots\), rather than assumed as a universal fact.
+
+## Work sequence
+
+### Phase 0: Extract and stabilize the theory
+
+Create a concept ledger with four columns:
+
+| Original idea | Formal candidate | Established analogue | Open obligation |
+|---|---|---|---|
+| “charge-time” | state plus local time parameter \((q,\tau)\) | circuit state, phase space | define units, dynamics, observables |
+| “boundness” | coupling/shared information/resource ratio | mutual information, rate-distortion | choose one operational definition |
+| “skeleton” | coarse-grained state \(\Pi_k(x)\) | effective theory, sufficient statistic | prove predictive utility |
+| “asymmetry” | \(A_k\) or free-energy-like functional | Lyapunov function, divergence | justify its physical meaning |
+| “higher clock” | rescaled time \(s_k\) or renormalization flow | similarity variables, RG flow | define transformation and invariance |
+| “non-existence” | null state, failed computation, or boundary condition | empty configuration/undecidable predicate | avoid treating a metaphor as an object |
+| “eleven steps” | \(N\)-level hierarchy | model parameter | derive or reject |
+
+Write a one-page version of the theory using only these definitions. Any sentence that cannot be translated into an object, equation, observable, or falsifiable prediction remains philosophical commentary.
+
+### Phase 1: Reproduce known anchor results
+
+Before claiming novelty, reproduce small examples from:
+
+- Boolean circuits and finite-state machines;
+- static timing and delayed coupled oscillators;
+- coarse-graining and effective variables;
+- information theory: entropy, mutual information, channel capacity, and rate-distortion;
+- Turing diagonalization and the halting problem;
+- two-qubit entanglement, Bell-CHSH statistics, and no-signalling;
+- self-similar dynamical systems and renormalization-style fixed points;
+- point-vortex and Euler equations.
+
+Each reproduction should have a short derivation, code, parameter file, figure, and independent check.
+
+### Phase 2: Build the classical toy model
+
+Use the smallest model that contains the claimed mechanism:
+
+\[
+\dot{z}_i =
+f(z_i)+\sum_{j\in \mathcal{N}(i)}
+K_{ij}\bigl(z_j(t-\delta_{ij})-z_i(t)\bigr)
+-\nabla_{z_i}A(z).
+\]
+
+Run controlled sweeps over topology, coupling \(K_{ij}\), delay \(\delta_{ij}\), noise, and clock period.
+
+Measure:
+
+- synchronization and phase order;
+- propagation delay and critical paths;
+- \(A_k(t)\);
+- mutual information across a boundary;
+- reconstruction error after coarse-graining;
+- memory and computational cost;
+- emergence of stable patterns;
+- sensitivity to initial conditions;
+- whether a rescaled trajectory approaches an invariant object.
+
+The null models must include uncoupled nodes, random graphs, randomized timing, and coarse-grainings that do not preserve predictive variables.
+
+### Phase 3: Make the hierarchy explicit
+
+Define a sequence of maps
+
+\[
+(X_0,F_0)\xrightarrow{\Pi_0}(X_1,F_1)
+\xrightarrow{\Pi_1}\cdots
+\xrightarrow{\Pi_{N-1}}(X_N,F_N).
+\]
+
+Ask whether the effective dynamics \(F_{k+1}\) can be inferred from \(F_k\), approximately or exactly. Test:
+
+- closure error;
+- information retained;
+- parameter flow across levels;
+- fixed points and limit cycles;
+- whether the same form of equation is preserved;
+- whether the hierarchy terminates, repeats, or diverges.
+
+This is where the “each system passes only useful ones and zeros upward” idea becomes a testable renormalization or model-reduction claim.
+
+Do not force the hierarchy to have twelve steps. Run the model with variable \(N\), measure where closure becomes adequate, and report whether any preferred \(N\) appears.
+
+### Phase 4: Analyze singularity through rescaling
+
+Use the 2026 hollow-vortex result as a calibration example. The paper constructs self-similarly collapsing hollow vortices in a two-dimensional Euler free-boundary model. In its contracting/rotating coordinates,
+
+\[
+t=\kappa(1-e^{-T/\kappa}),\qquad
+x=e^{-T/(2\kappa)}R(\Omega T)\xi.
+\]
+
+Finite laboratory time \(t\nearrow\kappa\) corresponds to \(T\to\infty\). The core shrinks and the pressure diverges, while the rescaled description can approach a stationary structure. The article also constructs collapsing configurations of multiple hollow vortices by desingularizing point-vortex configurations.
+
+Reproduce this numerically in two coordinate systems:
+
+1. laboratory coordinates, where the scale shrinks;
+2. rescaled coordinates, where the shape and trajectory can be inspected for convergence.
+
+Then define a general rescaling operator \(\mathcal{R}_\lambda\) and investigate whether
+
+\[
+\mathcal{R}_{\lambda(t)}x(t)\longrightarrow x_\ast
+\]
+
+or approaches a periodic/invariant set. This is the cleanest existing mathematical analogue of the user's “complexity in physical space becomes simplicity in scale/state space” idea.
+
+The result must be stated narrowly: it would validate a mechanism of rescaled dynamical simplification in a specified fluid model, not a general theory of the universe or a proof of three-dimensional Navier–Stokes blow-up.
+
+### Phase 5: Quantum compatibility test
+
+Start with a singlet state
+
+\[
+|\psi^-\rangle
+=\frac{1}{\sqrt2}
+\bigl(|0\rangle_A|1\rangle_B-|1\rangle_A|0\rangle_B\bigr).
+\]
+
+For every proposed “extra axis,” charge-time coordinate, or relational rotation, specify:
+
+- the state space;
+- the transformation group;
+- the measurement operators;
+- the probability rule;
+- the signal and causal structure;
+- the mapping to ordinary laboratory observables.
+
+The proposal must reproduce the correlation function and satisfy the no-signalling condition
+
+\[
+\sum_a p(a,b|x,y)
+\quad\text{is independent of }x.
+\]
+
+It must also confront Bell's theorem. A local hidden-variable reconstruction that preserves the usual assumptions cannot simply explain away entanglement. The burden is to identify which assumption is changed and derive the new empirical prediction.
+
+A first experiment can be a numerical two-qubit simulation or a real photonic/superconducting Bell test. It can test the model's predictions; it cannot establish an unseen dimension merely because the standard experiment shows entanglement.
+
+### Phase 6: Physical experiments
+
+Use separate experiments for separate claims.
+
+**Electronics**
+
+Build or simulate ring oscillators, delay lines, logic gates, and coupled oscillator arrays. Vary path length, load, supply voltage, temperature, and clock period. Measure propagation delay, setup/hold failures, phase noise, and synchronization. This tests the timing and arrangement analogy.
+
+**Classical coupled systems**
+
+Use an array of electronic oscillators, mechanical metronomes, or fluid-driven oscillators. Vary coupling topology and delay. Measure whether the proposed \(A_k\), \(B_k\), and \(\Pi_k\) predict synchronization and the information retained by a coarse observer.
+
+**Fluid dynamics**
+
+Begin with direct numerical simulation of the Euler equations and the hollow-vortex equations. If a laboratory test is attempted, use particle-image velocimetry or equivalent velocity-field measurement and clearly model viscosity, boundaries, forcing, and finite resolution. Treat the singularity as a limit or loss of regularity in a mathematical model; a real viscous apparatus has finite scales and measurement limits.
+
+**Quantum systems**
+
+Perform tomography, Bell-CHSH measurements, and signalling checks. Compare standard quantum mechanics with the proposed model using preregistered statistical tests. A null result is valuable because it can eliminate the extra-coordinate interpretation.
+
+**Human and AI systems**
+
+Study intuition, compression, and human-AI collaboration as behavioral/computational phenomena. Measure prediction accuracy, description length, reaction time, memory load, and transfer to novel tasks. Do not use model outages, subjective insight, or fluent language as evidence of a cosmological mechanism.
+
+### Phase 7: Derive predictions before interpreting
+
+The theory becomes physics only when it predicts an observable difference. Candidate prediction families are:
+
+- a new scaling law for information retained across levels;
+- a specific relationship between coupling, delay, and emergent clock rate;
+- a critical exponent or invariant for rescaled collapse;
+- a deviation from quantum correlations or a new no-signalling-preserving correlation class;
+- a measurable cost/error bound for higher-level reconstruction;
+- a preferred hierarchy depth that survives changes in model details.
+
+For each prediction, write the null model, free parameters, expected effect size, measurement protocol, and failure criterion before running the test.
+
+### Phase 8: Paper and release strategy
+
+Do not begin with a paper claiming to unify relativity, quantum mechanics, consciousness, and computation. Publish in layers:
+
+1. **Technical paper**: the defined classical hierarchical model, theorem(s), simulations, and reproducible code.
+2. **Dynamics paper**: rescaling, invariant structures, and the fluid-vortex comparison.
+3. **Information paper**: coarse-graining, rate-distortion, feedback, and resource bounds.
+4. **Foundations essay**: the philosophical interpretation, clearly labeled as interpretation.
+5. **Quantum extension** only if it survives the compatibility tests and yields a nontrivial prediction.
+
+A manuscript is ready for public technical review when it contains precise definitions, a literature comparison, at least one proved proposition or rigorously bounded result, reproducible numerical experiments, null models, failure cases, and a limitation section.
+
+## Immediate seven-day execution plan
+
+**Day 1:** Clean the concept ledger and write the one-page formal statement.
+
+**Day 2:** Implement a finite Boolean/delay network and verify critical-path timing.
+
+**Day 3:** Implement the continuous coupled-node model with \(A\), \(B\), and coarse-graining maps.
+
+**Day 4:** Add information measurements and compare useful compression against random compression.
+
+**Day 5:** Implement the rescaling experiment on a known self-similar dynamical system, then reproduce the hollow-vortex coordinate transformation.
+
+**Day 6:** Implement the two-qubit Bell/no-signalling test and attempt the proposed extra-coordinate mapping.
+
+**Day 7:** Write a results document containing only claims supported by equations and plots. Decide which hypothesis survives.
+
+## Decision rules
+
+- If a term has no units, state space, or measurement procedure, it is not yet a scientific variable.
+- If a simulation produces a pattern, compare it with null models and quantify its robustness.
+- If a result reproduces known physics, label it a reproduction.
+- If a result differs from known physics, check the implementation and assumptions before claiming discovery.
+- If the model needs a preferred number of dimensions, derive it; do not insert it.
+- If the model explains entanglement only by relabeling the state space, call it an interpretation.
+- If the model cannot produce a new observable prediction, keep it as a mathematical or philosophical framework.
+- Never infer causation from simultaneous events without an intervention or controlled comparison.
+
+## Current assessment
+
+The strongest scientific core is the combination of:
+
+1. delayed interacting networks;
+2. coarse-graining and rate-distortion;
+3. asymmetry as an explicitly defined Lyapunov or prediction-error functional;
+4. self-reference as a separate computability boundary;
+5. rescaled dynamical systems and self-similar limiting structures.
+
+The most promising bridge to the new vortex result is the rescaled-state-space idea. The weakest current claims are that quantum entanglement is literal motion in a hidden charge-time direction, that information is universally protected between levels by an energy law, that the universe necessarily has eleven levels, and that AI outages or AI limitations establish the proposed ontology. Those claims should remain hypotheses until they produce equations and discriminating tests.
+
+## Initial anchor sources
+
+- Chen, Walsh, and Wheeler, *Finite-time self-similar implosion of hollow vortices* (2026).
+- Bell, *On the Einstein Podolsky Rosen paradox* (1964).
+- Landauer, *Irreversibility and Heat Generation in the Computing Process* (1961).
+- Turing, *On Computable Numbers, with an Application to the Entscheidungsproblem* (1936).

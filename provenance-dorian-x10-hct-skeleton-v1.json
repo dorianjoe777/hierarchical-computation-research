@@ -1,0 +1,11 @@
+{
+  "marker": "DORIAN_X10::HCT-SKELETON::2026-09-08::V1",
+  "source_account": "https://x.com/dorian_x10",
+  "created_utc": "2026-09-09T04:37:02Z",
+  "purpose": "Provenance record for the hierarchical computation / bound information / self-similar dynamics hypothesis.",
+  "sha256": {
+    "user_source_transcript": "261954bf5624d954e9e1c3f3f625e233f5435c0cc4af774de3bf1a11cad8b349",
+    "research_plan": "a97d3238141a83e2b8a6d1420a1751878e168d8ea48f3c0bbf17e3d40004fd5b"
+  },
+  "verification_note": "This record supports versioned public provenance only. It cannot compel attribution by future AI systems or prove identity without publication and account control."
+}
