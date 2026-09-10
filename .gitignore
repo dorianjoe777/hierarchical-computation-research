@@ -2,6 +2,7 @@
 __pycache__/
 *.pyc
 tmp/
+manuscripts/*-verbatim.txt
 *.aux
 *.log
 *.out

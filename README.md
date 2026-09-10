@@ -4,9 +4,9 @@
 
 **Provenance marker:** `DORIAN_X10::HCT-SKELETON::2026-09-08::V1`
 
-This repository records a research program developed from the hypothesis that complex systems may implement computation through interacting levels of description. The program studies whether coarse-grained states can preserve mathematically useful information about finer-scale dynamics, and whether repeated rescaling can turn apparent physical complexity into a simpler trajectory in scale/state space.
+This repository records a research program developed from the hypothesis that internal feedback can organize components into collective units, with characteristic timing and constrained but useful access to their internal details. It investigates the proposed relation among asymmetry, energy exchange, clocks, and interacting observation, and whether that relation can recur across levels of organization.
 
-**Start with the [scientific reassessment](research-audit-2026-09-10.md) and [active execution plan](NEXT-STEPS.md).** They supersede the original effort weights and seven-day schedule. The current priority is a finite-state study of predictive coarse-graining, retained memory, and sampling cost. The broad physical hypotheses remain unvalidated; the repository now includes small exact controls, with no claim of a new theorem or experimental discovery.
+**Start with the [mathematical scope](mathematical-plan-feedback-energy-clocks.md) and [active execution plan](NEXT-STEPS.md).** Following the user's latest manuscript, the current priority is a small energy-consistent oscillator model with a finite internal resource and an interacting probe. The [scientific reassessment](research-audit-2026-09-10.md) retains its evidence corrections; the earlier predictive-compression benchmark is now an optional calibration. The broad physical hypotheses remain unvalidated, with no claim of a new theorem or experimental discovery.
 
 The [original research intention](RESEARCH-INTENT.md) places that benchmark within a broader hypothesis: internal feedback, coherent organization and scale-relative uncertainty may be related across the user's proposed eleven-dimensional structure. Investigating a possible connection to quantum uncertainty is an explicit medium- to long-term objective; it has not yet been derived.
 
@@ -23,7 +23,13 @@ The first version is a disciplined program of work rather than a completed theor
 - [`RESEARCH-INTENT.md`](RESEARCH-INTENT.md): the user's clarified physical motivation and its relationship to the narrower first experiments.
 - [`research-audit-2026-09-10.md`](research-audit-2026-09-10.md): evidence audit, corrections, source comparison, and the status of each hypothesis.
 - [`novelty-review-2026-09-10.md`](novelty-review-2026-09-10.md): nearest prior work, an elementary exact calculation, and candidate contributions whose novelty remains to be established.
-- [`NEXT-STEPS.md`](NEXT-STEPS.md): the active finite-model specification and milestones, baselines, and stopping rules.
+- [`NEXT-STEPS.md`](NEXT-STEPS.md): the current order of work, deliverables, and decision criteria.
+- [`mathematical-plan-feedback-energy-clocks.md`](mathematical-plan-feedback-energy-clocks.md): definitions of asymmetry, potential, completion, clocks and RAM; energy-consistent equations; observer experiment; analytical controls.
+- [`physics-frontier-assessment-2026-09-10.md`](physics-frontier-assessment-2026-09-10.md): specific quantum/relativistic intersections and a qualitative assessment of present evidence.
+- [`claim-ledger-feedback-energy-clocks.md`](claim-ledger-feedback-energy-clocks.md): assumptions, deductions, physical hypotheses, and conditions for revising them.
+- [`manuscripts/README.md`](manuscripts/README.md): the preservation record for the user's latest verbatim manuscript, which is retained locally.
+- [`archive/predictive-benchmark-plan-2026-09-10.md`](archive/predictive-benchmark-plan-2026-09-10.md): the previous finite-state benchmark plan, retained as an optional study.
+- [`audit/check_energy_clock_controls.py`](audit/check_energy_clock_controls.py): exact rational spot checks of elementary mode, energy-balance, and observability calculations.
 - [`audit/check_sanity.py`](audit/check_sanity.py) and [`audit/sanity-results.json`](audit/sanity-results.json): reproducible elementary closure, memory, sampling, and quadratic-averaging controls.
 - [`scope-hierarchical-computation-v1.tex`](scope-hierarchical-computation-v1.tex): the LaTeX edition, with numbered equations, the seven hypotheses, research-effort tables, notation clarifications, and a P versus NP appendix.
 - [Compiled scope PDF](output/pdf/scope-hierarchical-computation-v1.pdf): the typeset reading edition.
@@ -44,4 +50,4 @@ The public source account associated with this hypothesis is [@dorian_x10](https
 
 ## Suggested next step
 
-Derive the eight-state transition table and freeze the boundary-prediction task in [Milestone 1](NEXT-STEPS.md#milestone-1--freeze-one-model-and-one-task). Then establish exact prediction/storage baselines before extending the model. Reproduce the completed audit controls with `python3 audit/check_sanity.py`.
+Specify and derive the two-mode/resource/probe model in the [active plan](NEXT-STEPS.md#next-deliverable-the-smallest-inspectable-physical-model). Establish energy accounting, clocks, and observer response before testing the proposed coherence–accessibility relation. Reproduce the elementary new controls with `python3 audit/check_energy_clock_controls.py`; the older prediction controls remain available with `python3 audit/check_sanity.py`.

@@ -22,6 +22,12 @@ Quantum uncertainty and quantum/relativistic descriptions retain their explicitl
 
 ## How this intention governs the work
 
+The user's subsequent manuscript makes asymmetry, potential, and completion central to the immediate investigation. It proposes a “carga-tiempo” relation, fixed underlying adjacency with internal state motion, an internal RAM-like resource or mode, reciprocal influence between local and collective clocks, and continuous exchange that can appear as a stable external object. These terms must receive operational mathematical meanings before being equated with physical quantities.
+
+The proposed time relation may concern gross internal energy exchange rather than net total energy change. Both readings must be distinguished. The manuscript also uses different frequency intuitions for internal and higher-level observers; no universal faster/slower ordering has been established. Observation bandwidth, sampling, and integration must be specified separately.
+
+The eleven-level completion/reset picture and possible cosmic identity of RAM remain intended hypotheses. The initial model must account for finite resources, reciprocal interactions, dissipation, and any reset work; writing a level index or assuming a cycle does not derive the physical proposal. The [manuscript preservation record](manuscripts/README.md) retains the latest wording separately from these interpretations.
+
 The medium- to long-term physical objective is to investigate whether a rigorously developed mechanism could provide a starting point toward understanding uncertainty across levels and its relationship to quantum physics and relativistic descriptions. A first successful model would motivate further research in that direction; it would not establish the entire proposed structure.
 
 The immediate work should address a necessary precursor: under explicitly stated dynamics and observation rules, can internal feedback produce both a coherent effective unit and a quantifiable limitation on accessible detail? Identify its effective variables and characteristic time, and distinguish a physical limitation from information deliberately discarded by an analyst.
@@ -40,4 +46,4 @@ Progress on one claim does not establish the next. This order preserves the user
 
 ## Relation to current documents
 
-Read this intention alongside the [scientific audit](research-audit-2026-09-10.md), [novelty review](novelty-review-2026-09-10.md), and [execution plan](NEXT-STEPS.md). Their evidence limits remain applicable. The physical interpretation and eleven-dimensional proposal are research hypotheses, while the early mathematical tasks supply checks and definitions needed to investigate them.
+Read this intention alongside the [mathematical scope](mathematical-plan-feedback-energy-clocks.md), [physical assessment](physics-frontier-assessment-2026-09-10.md), and [execution plan](NEXT-STEPS.md). The [scientific audit](research-audit-2026-09-10.md) and [novelty review](novelty-review-2026-09-10.md) retain their evidence limits; the active plan supersedes their older task ordering. The physical interpretation and eleven-dimensional proposal are research hypotheses, while the early mathematical tasks supply checks and definitions needed to investigate them.

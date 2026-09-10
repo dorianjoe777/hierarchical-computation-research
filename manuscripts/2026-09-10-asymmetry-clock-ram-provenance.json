@@ -1,0 +1,11 @@
+{
+  "source": "Exact text content of the current user message, retrieved from its local conversation record",
+  "source_message_timestamp": "2026-09-10T18:45:51.715Z",
+  "source_account": "https://x.com/dorian_x10",
+  "file": "manuscripts/2026-09-10-asymmetry-clock-ram-verbatim.txt",
+  "encoding": "UTF-8",
+  "bytes": 5975,
+  "characters": 5961,
+  "sha256": "cca37eb4fdb1bcacb1a25aad709e089c6a1a6cfa5bd87f9fe0e0c797e1a6110f",
+  "preservation": "No spelling, punctuation, whitespace or content edits; includes quoted assistant passages and the final preservation request. This hash records the saved text, not a proof of scientific validity or worldwide priority."
+}

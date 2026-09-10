@@ -1,5 +1,7 @@
 # Research reassessment — 10 September 2026
 
+> Direction update, 10 September 2026: this document retains its original evidence assessment. Following the user's later asymmetry/clock/RAM manuscript, the [mathematical scope](mathematical-plan-feedback-energy-clocks.md) and [active roadmap](NEXT-STEPS.md) supersede its task ordering. Energy exchange, asymmetry, clocks, and interacting observation are now central; the predictive benchmark remains optional.
+
 **Status:** scientific scope audit and reproducible elementary checks. This document and [NEXT-STEPS.md](NEXT-STEPS.md) supersede the priorities and seven-day schedule in the v1 scope. The original Markdown, LaTeX, PDF, hashes, and tags remain historical records.
 
 **Conceptual source:** [@dorian_x10](https://x.com/dorian_x10). This audit distinguishes the user's questions and hypotheses from AI-proposed formalizations. Attribution records a contribution to this project; scientific novelty requires a separate literature comparison.

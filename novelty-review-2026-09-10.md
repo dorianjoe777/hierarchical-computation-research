@@ -1,5 +1,7 @@
 # Novelty assessment — 10 September 2026
 
+> Direction update, 10 September 2026: this document retains its original evidence assessment. Following the user's later asymmetry/clock/RAM manuscript, the [mathematical scope](mathematical-plan-feedback-energy-clocks.md) and [active roadmap](NEXT-STEPS.md) supersede its task ordering. Energy exchange, asymmetry, clocks, and interacting observation are now central; the predictive benchmark remains optional.
+
 **Conclusion:** there is scope to investigate an original, limited contribution, but this project has not yet demonstrated one. The current broad concepts and the proposed first experiment substantially overlap established research. No confirmed literature gap has been identified by this targeted search.
 
 This assessment follows the [scientific audit](research-audit-2026-09-10.md) and sharpens the novelty gate in [NEXT-STEPS.md](NEXT-STEPS.md). The conceptual motivation remains attributed to [@dorian_x10](https://x.com/dorian_x10); the finite-state formalization is a modeling choice made in this project. Independently reaching a useful question is different from establishing scientific priority for its mathematical answer.
