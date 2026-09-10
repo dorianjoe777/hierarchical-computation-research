@@ -1,0 +1,73 @@
+{
+  "controls": {
+    "hidden_phase": {
+      "closure_defect_tv": "1",
+      "conditional_memory_information_bits": 1.0,
+      "current_only_bayes_error": "1/2",
+      "current_state_entropy_bits": 1.0,
+      "initial_law": "uniform on the four microstates (stationary)",
+      "microstate_entropy_bits": 2,
+      "next_given_current_entropy_bits": 1.0,
+      "next_given_previous_and_current_entropy_bits": 0.0,
+      "one_lag_bayes_error": "0",
+      "projection": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sampling_stride": 1,
+      "two_observation_state_entropy_bits": 2.0
+    },
+    "parity": {
+      "closure_defect_tv": "0",
+      "conditional_memory_information_bits": 0.0,
+      "current_only_bayes_error": "0",
+      "current_state_entropy_bits": 1.0,
+      "initial_law": "uniform on the four microstates (stationary)",
+      "microstate_entropy_bits": 2,
+      "next_given_current_entropy_bits": 0.0,
+      "next_given_previous_and_current_entropy_bits": 0.0,
+      "one_lag_bayes_error": "0",
+      "projection": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "sampling_stride": 1,
+      "two_observation_state_entropy_bits": 1.0
+    },
+    "slower_sampling": {
+      "closure_defect_tv": "0",
+      "conditional_memory_information_bits": 0.0,
+      "current_only_bayes_error": "0",
+      "current_state_entropy_bits": 1.0,
+      "initial_law": "uniform on the four microstates (stationary)",
+      "microstate_entropy_bits": 2,
+      "next_given_current_entropy_bits": 0.0,
+      "next_given_previous_and_current_entropy_bits": 0.0,
+      "one_lag_bayes_error": "0",
+      "projection": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "sampling_stride": 2,
+      "two_observation_state_entropy_bits": 1.0
+    }
+  },
+  "cycle_rule": "X[t+1] = (X[t] + 1) mod 4",
+  "limitations": [
+    "Parity and paired states are different observables; their scores are not a same-task comparison.",
+    "Stride two changes the prediction horizon and skips intermediate observations.",
+    "One-lag memory in the paired-state control recovers all two bits of the microstate.",
+    "These calculations establish neither a new law nor a physical energy or complexity bound."
+  ],
+  "status": "All analytical controls passed; no new scientific result claimed.",
+  "zero_mean_control": {
+    "mean": "0",
+    "second_moment": "1"
+  }
+}

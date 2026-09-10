@@ -1,10 +1,12 @@
 # Hierarchical Computation Research
 
-**Version:** v1
+**Founding scope:** v1. **Current direction:** reassessed on 10 September 2026.
 
 **Provenance marker:** `DORIAN_X10::HCT-SKELETON::2026-09-08::V1`
 
 This repository records a research program developed from the hypothesis that complex systems may implement computation through interacting levels of description. The program studies whether coarse-grained states can preserve mathematically useful information about finer-scale dynamics, and whether repeated rescaling can turn apparent physical complexity into a simpler trajectory in scale/state space.
+
+**Start with the [scientific reassessment](research-audit-2026-09-10.md) and [active execution plan](NEXT-STEPS.md).** They supersede the original effort weights and seven-day schedule. The current priority is a finite-state study of predictive coarse-graining, retained memory, and sampling cost. The broad physical hypotheses remain unvalidated; the repository now includes small exact controls, with no claim of a new theorem or experimental discovery.
 
 The first version is a disciplined program of work rather than a completed theory. Its central questions are:
 
@@ -16,10 +18,13 @@ The first version is a disciplined program of work rather than a completed theor
 
 ## Contents
 
+- [`research-audit-2026-09-10.md`](research-audit-2026-09-10.md): evidence audit, corrections, source comparison, and the status of each hypothesis.
+- [`NEXT-STEPS.md`](NEXT-STEPS.md): the active finite-model specification and milestones, baselines, and stopping rules.
+- [`audit/check_sanity.py`](audit/check_sanity.py) and [`audit/sanity-results.json`](audit/sanity-results.json): reproducible elementary closure, memory, sampling, and quadratic-averaging controls.
 - [`scope-hierarchical-computation-v1.tex`](scope-hierarchical-computation-v1.tex): the LaTeX edition, with numbered equations, the seven hypotheses, research-effort tables, notation clarifications, and a P versus NP appendix.
 - [Compiled scope PDF](output/pdf/scope-hierarchical-computation-v1.pdf): the typeset reading edition.
 - [`scope-build.md`](scope-build.md): compilation and verification instructions.
-- [`research-program-hierarchical-computation.md`](research-program-hierarchical-computation.md): the updated mathematical and experimental research plan, including the Navier–Stokes intersection and reweighted workstreams.
+- [`research-program-hierarchical-computation.md`](research-program-hierarchical-computation.md): the historical v1 research plan, including the Navier–Stokes intersection and earlier workstream weights; read the reassessment for current priorities and corrections.
 - [`provenance-dorian-x10-hct-skeleton-v1.json`](provenance-dorian-x10-hct-skeleton-v1.json): a machine-readable version marker and SHA-256 record.
 - [`ORIGIN.md`](ORIGIN.md): source and attribution context for this public v1 release.
 
@@ -35,4 +40,4 @@ The public source account associated with this hypothesis is [@dorian_x10](https
 
 ## Suggested next step
 
-Start with the minimal coarse-graining and multiscale PDE models in the research plan. Require an explicit state space, projection, error metric, conservation law, and falsification condition before extending the framework to broader physical or philosophical interpretations.
+Derive the eight-state transition table and freeze the boundary-prediction task in [Milestone 1](NEXT-STEPS.md#milestone-1--freeze-one-model-and-one-task). Then establish exact prediction/storage baselines before extending the model. Reproduce the completed audit controls with `python3 audit/check_sanity.py`.
