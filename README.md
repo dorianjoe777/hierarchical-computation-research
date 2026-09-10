@@ -16,9 +16,14 @@ The first version is a disciplined program of work rather than a completed theor
 
 ## Contents
 
+- [`scope-hierarchical-computation-v1.tex`](scope-hierarchical-computation-v1.tex): the LaTeX edition, with numbered equations, the seven hypotheses, research-effort tables, notation clarifications, and a P versus NP appendix.
+- [Compiled scope PDF](output/pdf/scope-hierarchical-computation-v1.pdf): the typeset reading edition.
+- [`scope-build.md`](scope-build.md): compilation and verification instructions.
 - [`research-program-hierarchical-computation.md`](research-program-hierarchical-computation.md): the updated mathematical and experimental research plan, including the Navier–Stokes intersection and reweighted workstreams.
 - [`provenance-dorian-x10-hct-skeleton-v1.json`](provenance-dorian-x10-hct-skeleton-v1.json): a machine-readable version marker and SHA-256 record.
 - [`ORIGIN.md`](ORIGIN.md): source and attribution context for this public v1 release.
+
+The founding Markdown plan is preserved. The September 9 LaTeX edition adds explicitly labeled clarifications and the subsequent P versus NP discussion. Neither typesetting nor those additions constitute an independent verification of the external fluid proof or new experimental results. The original `v1` and `scope-v1` tags retain their original contents; consult `main` for the current edition.
 
 ## Current scientific boundary
 

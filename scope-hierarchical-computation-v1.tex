@@ -6,7 +6,10 @@
 
 % ---------- Encoding, typography, and page geometry ----------
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+\fi
 \usepackage{lmodern}
 \usepackage{microtype}
 \usepackage[a4paper,margin=1in]{geometry}
@@ -25,9 +28,10 @@
 % ---------- Headers and metadata ----------
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+\usepackage{needspace}
 \hypersetup{
   pdftitle={Hierarchical Computation, Bound Information, and Self-Similar Dynamics},
-  pdfauthor={Dorian X / @dorian_x10},
+  pdfauthor={Dorian X / @dorian\_x10},
   pdfsubject={Research program, mathematical formalization, and experimental scope},
   pdfkeywords={hierarchical computation, coarse graining, information, asymmetry, self reference, rescaling, Navier--Stokes}
 }
@@ -76,6 +80,10 @@
 \setlist[itemize]{leftmargin=*}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.55em}
+\setlength{\headheight}{14pt}
+\setlength{\emergencystretch}{1.5em}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.18}
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{Hierarchical computation research}
@@ -84,6 +92,7 @@
 
 \begin{document}
 
+\hypersetup{pageanchor=false}
 \begin{titlepage}
   \centering
   \vspace*{1.2cm}
@@ -93,12 +102,16 @@
   \vspace{1.2cm}
   {\large Scope and execution plan --- version 1\par}
   \vspace{1.2cm}
-  \begin{tabular}{rl}
-    \textbf{Provenance marker:} & \texttt{DORIAN\_X10::HCT-SKELETON::2026-09-08::V1}\\
-    \textbf{Associated source:} & \href{https://x.com/dorian_x10}{https://x.com/dorian\_x10}\\
-    \textbf{Public repository:} & \href{https://github.com/dorianjoe777/hierarchical-computation-research}{hierarchical-computation-research}\\
-    \textbf{Release date:} & September 8, 2026 (America/Bogota)
-  \end{tabular}
+  \textbf{Concept source}\par
+  \href{https://x.com/dorian_x10}{Dorian X / @dorian\_x10}\par
+  \vspace{0.5cm}
+  \textbf{Provenance marker}\par
+  {\small\texttt{DORIAN\_X10::HCT-SKELETON::2026-09-08::V1}}\par
+  \vspace{0.5cm}
+  \href{https://github.com/dorianjoe777/hierarchical-computation-research}{Public research repository}\par
+  \vspace{0.5cm}
+  Founding scope: September 8, 2026\par
+  LaTeX edition and clarifications: September 9, 2026\par
   \vfill
   \begin{minipage}{0.88\textwidth}
     \small
@@ -106,9 +119,17 @@
   \end{minipage}
   \vfill
 \end{titlepage}
+\hypersetup{pageanchor=true}
 
 \tableofcontents
 \newpage
+
+\section*{Reading this edition}
+\addcontentsline{toc}{section}{Reading this edition}
+
+This edition preserves the research program recorded in the founding Markdown file. Appendix~\ref{app:clarifications} supplies notation and interpretation clarifications; Appendix~\ref{app:pnp} addresses the subsequent question about P versus NP. These additions are proposed formalizations and research directions, not findings from completed experiments. Conceptual motivation is attributed to Dorian X's contributions in the working conversation; organization, wording, and mathematical candidates were developed with AI assistance. This attribution does not claim originality for established mathematics cited or reproduced here.
+
+The early seven-day schedule is retained as a historical baseline. The audit-first order in Section~1 takes precedence; quantum extensions are conditional on prior model definition and compatibility work. The research-effort percentages allocate work and are not confidence scores or odds of a breakthrough.
 
 \section{September 8, 2026 update: the OpenAI Navier--Stokes result}
 
@@ -223,7 +244,7 @@ This conjecture is now directly testable against the Navier--Stokes construction
 
 These are recommended \textbf{research-effort weights for the next stage}, not probabilities that the underlying philosophical theory is true.
 
-\begin{longtable}{P{0.23\textwidth}P{0.08\textwidth}P{0.31\textwidth}P{0.27\textwidth}}
+\begin{longtable}{P{0.23\textwidth}P{0.095\textwidth}P{0.295\textwidth}P{0.27\textwidth}}
 \caption{Recommended research-effort weights.}\label{tab:weights}\\
 \toprule
 \textbf{Workstream} & \textbf{Weight} & \textbf{Why it now deserves this weight} & \textbf{Near-term deliverable}\\
@@ -367,9 +388,9 @@ The first theorem to seek is conditional:
   \emph{Under specified assumptions on $M$, $J$, coupling, and noise, does $A$ decrease, reach a stationary set, cycle, or develop a rescaled attractor?}
 \end{quote}
 
-\subsection{Boundedness and information transfer}
+\subsection{Boundness and information transfer}
 
-Define ``boundedness'' operationally. One useful candidate is a normalized coupling or shared-information measure:
+Define the proposed term ``boundness'' operationally; it is distinct from mathematical boundedness of a norm or an energy. One useful candidate is a normalized coupling or shared-information measure:
 \begin{equation}
   B_k=\frac{\MI(X_{\mathrm{inside}};X_{\mathrm{boundary}})}{C_k},
   \label{eq:boundness}
@@ -527,7 +548,7 @@ Ask whether the effective dynamics $F_{k+1}$ can be inferred from $F_k$, approxi
 
 This is where the ``each system passes only useful ones and zeros upward'' idea becomes a testable renormalization or model-reduction claim.
 
-Do not force the hierarchy to have twelve steps. Run the model with variable $N$, measure where closure becomes adequate, and report whether any preferred $N$ appears.
+Do not force a preferred hierarchy depth. Run the model with variable $N$, measure where closure becomes adequate, and report whether any preferred $N$ appears.
 
 \subsection{Phase 4: analyze singularity through rescaling}
 
@@ -640,7 +661,7 @@ A manuscript is ready for public technical review when it contains precise defin
 
 \section{Immediate seven-day execution plan}
 
-\begin{description}[style=nextline,leftmargin=0pt,labelindent=0pt]
+\begin{description}[style=nextline,leftmargin=0pt,labelindent=0pt,labelwidth=0pt,labelsep=0pt]
   \item[Day 1:] Clean the concept ledger and write the one-page formal statement.
   \item[Day 2:] Implement a finite Boolean/delay network and verify critical-path timing.
   \item[Day 3:] Implement the continuous coupled-node model with $A$, $B$, and coarse-graining maps.
@@ -689,5 +710,87 @@ The most promising bridge to the new vortex result is the rescaled-state-space i
 \addcontentsline{toc}{section}{Provenance and scope note}
 
 This LaTeX document is the public v1 rendering of the Markdown plan in the repository. The associated source account is \href{https://x.com/dorian_x10}{@dorian\_x10}. The raw private working transcript is not reproduced here; the repository's machine-readable provenance record contains a SHA-256 digest for version tracking. The marker and digest do not independently establish identity or legal authorship. Scientific claims remain subject to derivation, code, data, and independent review.
+
+\clearpage
+\appendix
+\section{Notation, evidence, and execution clarifications}\label{app:clarifications}
+
+\subsection{What has and has not been established}
+
+The equations in the main text are a mixture of reported results from external work and proposed models. This project has not independently built the external Lean formalization, completed numerical reproductions, or performed the experiments described. Compiling this document checks its typesetting, not the validity of those scientific claims. New propositions must name assumptions and include proofs; numerical evidence must state resolution, tolerances, parameter ranges, and controls.
+
+\subsection{State spaces, symbols, and units}
+
+The symbol $X_k$ denotes a state space in the dynamical sections and a random variable in information expressions. For calculations, use $\mathcal X_k$ for the space and $\mathsf X_k$ for a random variable valued in it, with a specified probability law. A deterministic trajectory alone does not specify the joint distribution needed for mutual information.
+
+The constraint matrix $C_k$ in Equation~\eqref{eq:constraint-asymmetry} and the capacity denominator $C_k$ in Equation~\eqref{eq:boundness} play different roles. In implementations, rename them $\mathsf C_k$ and $\mathcal C_k$. If mutual information is measured in bits and channel capacity in bits per second, use an observation window $\Delta t_k$ and normalize by $\mathcal C_k\Delta t_k$. A dimensionless resource ratio is not automatically in $[0,1]$ without a proved upper bound. Alternative definitions of boundness should be compared, not treated as interchangeable physical laws.
+
+Likewise, $u$ is velocity in Equation~\eqref{eq:navier-stokes}, whereas $u_k$ is input in Equation~\eqref{eq:continuous-dynamics}. Reserve distinct symbols when the models are combined. Use $\Projection_k:X_k\to S_k$ for an observation and $\Coarse_k:X_k\to X_{k+1}$ for the inter-level map. If $S_k$ is identified with $X_{k+1}$, state the identification explicitly.
+
+\subsection{Conditional statements requiring care}
+
+For a differentiable $A$, a deterministic finite-dimensional model of the form in Equation~\eqref{eq:gradient-flow}, with $M=M^{\mathsf T}\succeq0$ and $J^{\mathsf T}=-J$, satisfies along a smooth solution
+\begin{equation}
+ \frac{dA}{dt}=-\nabla A^{\mathsf T}M\nabla A\leq0.
+\end{equation}
+This follows from the chain rule and $v^{\mathsf T}Jv=0$. It does not guarantee convergence to a global minimum or a polynomial-time optimization algorithm. Added forcing, noise, or a time-dependent objective changes the calculation. Stochastic dynamics require an explicit noise model and, where applicable, an It\^o correction.
+
+Equation~\eqref{eq:timing} is a schematic setup-time constraint; a full circuit analysis also needs a separate hold-time constraint with a defined clock-skew convention. Equation~\eqref{eq:rate-distortion} should generally use an infimum unless existence of an optimizing channel has been established. Quantum no-signalling requires both marginals: $\sum_a p(a,b\mid x,y)$ is independent of $x$, and $\sum_b p(a,b\mid x,y)$ is independent of $y$.
+
+For a rescaled limit, specify the transformation, domain, topology or norm of convergence, and whether the result concerns one constructed trajectory or a neighborhood of initial data. Fluid energy boundedness does not bound all computational resources. A finite-time singularity alone supplies neither an algorithm nor a way to read out infinitely fine structure.
+
+\section{P versus NP: possible connections and proof obligations}\label{app:pnp}
+
+\subsection{The question}
+
+Interpreting the conversational notation ``P=PN'' as the standard question $\mathsf P\stackrel{?}{=}\mathsf{NP}$: $\mathsf P$ consists of decision problems solvable by a deterministic algorithm in time polynomial in the input's bit length. $\mathsf{NP}$ consists of decision problems whose yes instances have polynomial-length certificates checkable in polynomial time. NP means nondeterministic polynomial time, not ``non-polynomial.'' The question remains listed as unsolved by the \href{https://www.claymath.org/millennium/p-vs-np/}{Clay Mathematics Institute}.
+
+Boolean satisfiability (SAT) is a useful anchor: given a Boolean formula, decide whether an assignment makes it true. Checking a proposed assignment is efficient; proving an efficient decision algorithm for all formulas would establish $\mathsf P=\mathsf{NP}$ because SAT is NP-complete. Proving that SAT has no deterministic polynomial-time algorithm would establish $\mathsf P\ne\mathsf{NP}$. See \href{https://www.claymath.org/wp-content/uploads/2022/06/pvsnp.pdf}{Stephen Cook's official problem description}.
+
+All NP problems are decidable by finite search. The halting problem's undecidability is a different limitation. A self-reference argument, a fast example, or a failure of one solver does not establish a worst-case complexity bound for every algorithm. Polynomial time is an asymptotic condition; its constants and exponent can still make an algorithm impractical.
+
+\subsection{The strongest bridge: what must a skeleton preserve?}
+
+Our proposed connection is to test whether the coarse description preserves the answer to a decision problem, not merely its average dynamics. For SAT formulas $\varphi$, let $S(\varphi)$ be a finite binary summary and let $D$ decode its answer. A sufficient route to an efficient solver is
+\begin{equation}
+ D(S(\varphi))=1
+ \quad\Longleftrightarrow\quad
+ \varphi\text{ is satisfiable},
+ \label{eq:sat-summary}
+\end{equation}
+with a uniform deterministic algorithm computing $S$ and $D$ in polynomial time, including all intermediate representations. A short summary by itself proves nothing: the single answer bit is a one-bit summary, but computing it is the original problem.
+
+Conversely, if a proposed summary maps one satisfiable and one unsatisfiable formula to exactly the same value, no deterministic decoder using that summary alone can decide both correctly. This is an immediate obstruction for that summary, not a proof that all possible algorithms fail. Predictive sufficiency for a fluid observable does not imply sufficiency for an arbitrary logical decision.
+
+\subsection{A concrete hierarchical benchmark}
+
+Partition the variables and clauses of a SAT instance into blocks. For a block with $k$ boundary variables shared with its surroundings, use a boundary table
+\begin{equation}
+ T_B(b)=1\quad\Longleftrightarrow\quad
+ \exists a_{\mathrm{internal}}\;\varphi_B(a_{\mathrm{internal}},b)=1,
+ \qquad b\in\{0,1\}^k.
+\end{equation}
+The full table has $2^k$ entries. Such tables are a precise candidate for our ``skeleton'': internal assignments are hidden while extendable boundary assignments are retained. Hierarchical composition must preserve shared constraints and account for every interface. When all required interfaces remain small, the approach can be useful. Large interfaces or expensive table construction can restore exponential cost. This is a connection to established dynamic programming and graph decomposition, not a novelty claim.
+
+First reproduce the baseline exactly. Then compare a proposed compressed table against it. Record answer preservation, summary length, construction time, merge cost, decoding time, memory, and failure instances. For small instances use exhaustive verification; for larger ones use independently checked SAT witnesses and appropriate unsatisfiability certificates. Benchmark both satisfiable and unsatisfiable inputs and vary structure as well as size. An empirical scaling fit is not a worst-case proof.
+
+\subsection{Levels of potential contribution}
+
+\begin{description}[style=nextline,leftmargin=0pt,labelindent=0pt,labelwidth=0pt,labelsep=0pt]
+ \item[Level 1: useful algorithms for selected systems.]
+ Hierarchy, asymmetry, and coarse variables may suggest better heuristics or algorithms for restricted instances. This is the most actionable direction, and it may succeed whether P equals NP or not.
+ \item[Level 2: rigorous statements for a defined model.]
+ Prove which summaries preserve decisions, bound the cost in terms of interface size, or construct counterexamples to a proposed compression rule. These results would clarify the framework without settling the general problem.
+ \item[Level 3: a route to the general question.]
+ A polynomial-time construction and decoder satisfying Equation~\eqref{eq:sat-summary} for every SAT input would settle equality. A lower bound applying to all deterministic algorithms would settle inequality. No such result has been obtained in this project, and there is no basis for assigning a numerical success probability.
+ \item[Level 4: fluid or quantum computation.]
+ This is currently a speculative connection. A physical device requires a finite input encoding, reliable evolution, and accessible output. Count preparation, precision, memory, number of components, elapsed time, and readout. Even a polynomial-time quantum algorithm for SAT would not, by itself, prove deterministic P equals NP.
+\end{description}
+
+Rescaling $t=T_\ast(1-e^{-s})$ sends $s\to\infty$ to finite $t\uparrow T_\ast$. It does not turn infinitely many computational steps into finitely many bit operations. An analogous physical proposal must show how states are prepared and distinguished at shrinking scales. Scott Aaronson's \href{https://www.scottaaronson.com/papers/npcomplete.pdf}{\emph{NP-complete Problems and Physical Reality}} is a primary reference for evaluating such resource claims.
+
+\subsection{Recommended place in the program}
+
+Treat this as a bounded exploratory task within the existing computability and coarse-graining workstreams. The first deliverable is an exact SAT boundary-summary baseline with a proof of its meaning and cost, followed by one precisely specified compression proposal. Increase its priority only if it yields a proved improvement, a useful counterexample, or robust experimental gains. The existing effort weights remain planning allocations; they are not probabilities of resolving P versus NP.
 
 \end{document}

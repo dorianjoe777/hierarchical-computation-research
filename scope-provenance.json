@@ -1,0 +1,22 @@
+{
+  "edition": "LaTeX scope v1 with clarification and P versus NP appendices",
+  "source_account": "https://x.com/dorian_x10",
+  "founding_marker": "DORIAN_X10::HCT-SKELETON::2026-09-08::V1",
+  "built_utc": "2026-09-10T16:55:27.083021+00:00",
+  "compiler": "Tectonic 0.17.0",
+  "pdf_pages": 21,
+  "checks": {
+    "compilation": "passed",
+    "typesetting_warnings": 0,
+    "unresolved_references": 0,
+    "all_pages_visually_reviewed": true,
+    "founding_markdown_hash_matches": true
+  },
+  "sha256": {
+    "scope-hierarchical-computation-v1.tex": "e6677e2798a7f75345146d231970d6aef150f9a5158cdadfea6b54646ecd0ac4",
+    "output/pdf/scope-hierarchical-computation-v1.pdf": "e370f27d35db99fdb76c4cfa4fdd4a1df527d354051ca7245f588a906ad08170",
+    "scope-build.md": "1298175cc3c95d1731329036c71aa30dcb711b9c66f44899706be8b85f62631b",
+    "research-program-hierarchical-computation.md": "a97d3238141a83e2b8a6d1420a1751878e168d8ea48f3c0bbf17e3d40004fd5b"
+  },
+  "scope_note": "Checks concern document production. External proofs, research hypotheses, and proposed experiments have not been independently verified by this build."
+}
