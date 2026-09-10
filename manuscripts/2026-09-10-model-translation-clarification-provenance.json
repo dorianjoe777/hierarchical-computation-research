@@ -1,0 +1,11 @@
+{
+  "source": "Exact text content of the user clarification, retrieved from its local conversation record",
+  "source_message_timestamp": "2026-09-10T19:18:41.374Z",
+  "source_account": "https://x.com/dorian_x10",
+  "file": "manuscripts/2026-09-10-model-translation-clarification-verbatim.txt",
+  "encoding": "UTF-8",
+  "bytes": 367,
+  "characters": 367,
+  "sha256": "c4c510e4c3f7d7759e7e6ea1609d51fddc5ba4709a62e500c580b855f322cd94",
+  "preservation": "No spelling, punctuation, whitespace or content edits. Raw text remains local and excluded from Git; the record supports version comparison, not scientific validity or worldwide priority."
+}

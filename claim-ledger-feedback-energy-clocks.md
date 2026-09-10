@@ -4,6 +4,8 @@
 
 “Elementary deduction” below means a consequence of the stated model, not a new result in physics. The audit script spot-checks selected exact matrix and mode identities on rational fixtures; the general arguments are given in the scope. No physical experiment or full information-access sweep has been completed for this model.
 
+The subsequent [working model v0.1](models/feedback_null_v01/SPEC.md) adds deterministic numerical controls and a full set of initial-value equations. Its [results](models/feedback_null_v01/RESULTS.md) are model calculations, not physical measurements. The [self-reference frontier](self-reference-frontier-2026-09-10.md) and [foundations overview](FOUNDATIONS-OVERVIEW.md) preserve the user's newer translation request.
+
 | ID | Statement | Status and provenance | Evidence or next test | Failure condition / limit |
 |---|---|---|---|---|
 | D1 | Asymmetry is measured relative to a named symmetry and metric | Definition proposed for this realization | Exchange symmetry and normalized charge/flux differences | Does not establish a force or monotonic relaxation |
@@ -25,5 +27,8 @@
 | P2 | The mechanism can contribute to quantum/relativistic unification | Intended longer-term application, unestablished | Operational geometry, causal structure and quantum/gravitational limits | A hierarchy index or universal clock label is insufficient |
 | P3 | Eleven levels and a completion/reset rule follow from the theory | User hypothesis, unsupported selection rule | Keep depth variable; derive rather than choose termination/recurrence | Setting depth to eleven is an assumption; unaccounted reset work fails energy balance |
 | P4 | RAM or hidden internal activity identifies dark matter or another cosmic phenomenon | Boundary interpretation, unsupported | A separate physical model and quantitative observations | Analogy alone cannot identify a substance or gravitational effect |
+| E8 | A locally null pair can become active from finite auxiliary/interface energy while the global null state remains invariant | Derived in v0.1 and reproduced numerically | Complete equations, energy balance, and four model controls | Does not establish activity or energy from absolute nothingness |
+| H6 | Attempted self-certification regenerates a residual and thereby sustains temporal activity | New user hypothesis with a bounded physical translation | Add an explicit target and finite physical record/controller after baseline observation | Logical inconsistency alone supplies no dynamics, period, or energy source |
+| H7 | Time and existence are the recurring failure of a whole to certify its nonexistence | User's ultimate interpretation; unestablished | Derive a discriminating operational consequence without assuming its conclusion | A defined zero state and an already timed update rule do not establish this origin claim |
 
 Before a research claim is upgraded, record its assumptions, closest prior result, proof or data file, uncertainty, and a failure condition. A new term, simulated hierarchy, or reproducing an existing effect does not establish novelty. Preserve negative findings and distinguish failure of one chosen realization from a universal impossibility claim.

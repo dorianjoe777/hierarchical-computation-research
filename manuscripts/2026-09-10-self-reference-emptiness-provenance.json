@@ -1,0 +1,11 @@
+{
+  "source": "Exact text content of the user message, retrieved from its local conversation record",
+  "source_message_timestamp": "2026-09-10T19:14:55.192Z",
+  "source_account": "https://x.com/dorian_x10",
+  "file": "manuscripts/2026-09-10-self-reference-emptiness-verbatim.txt",
+  "encoding": "UTF-8",
+  "bytes": 2348,
+  "characters": 2348,
+  "sha256": "fa45bf4eef6610c407afa2bc806b9fd236dad080ade8ebb01b21078f9a42ebc2",
+  "preservation": "No spelling, punctuation, whitespace or content edits; includes the final preservation and research-order request. The raw message is retained locally and excluded from Git. This record does not establish scientific validity or worldwide priority."
+}

@@ -6,7 +6,7 @@
 
 This repository records a research program developed from the hypothesis that internal feedback can organize components into collective units, with characteristic timing and constrained but useful access to their internal details. It investigates the proposed relation among asymmetry, energy exchange, clocks, and interacting observation, and whether that relation can recur across levels of organization.
 
-**Start with the [mathematical scope](mathematical-plan-feedback-energy-clocks.md) and [active execution plan](NEXT-STEPS.md).** Following the user's latest manuscript, the current priority is a small energy-consistent oscillator model with a finite internal resource and an interacting probe. The [scientific reassessment](research-audit-2026-09-10.md) retains its evidence corrections; the earlier predictive-compression benchmark is now an optional calibration. The broad physical hypotheses remain unvalidated, with no claim of a new theorem or experimental discovery.
+**Start with the [foundations overview](FOUNDATIONS-OVERVIEW.md), [working model v0.1](models/feedback_null_v01/SPEC.md), and [active execution plan](NEXT-STEPS.md).** The initial energy-consistent oscillator model now has a finite internal resource, reciprocal probe, complete equations, and runnable numerical controls. The [scientific reassessment](research-audit-2026-09-10.md) retains its evidence corrections; the earlier predictive-compression benchmark is an optional calibration. The broad physical hypotheses remain unvalidated, with no claim of a new theorem or experimental discovery.
 
 The [original research intention](RESEARCH-INTENT.md) places that benchmark within a broader hypothesis: internal feedback, coherent organization and scale-relative uncertainty may be related across the user's proposed eleven-dimensional structure. Investigating a possible connection to quantum uncertainty is an explicit medium- to long-term objective; it has not yet been derived.
 
@@ -20,6 +20,10 @@ The first version is a disciplined program of work rather than a completed theor
 
 ## Contents
 
+- [`FOUNDATIONS-OVERVIEW.md`](FOUNDATIONS-OVERVIEW.md): consolidated definitions, evidence, and the sequence from foundations to limits to applications.
+- [`models/feedback_null_v01/SPEC.md`](models/feedback_null_v01/SPEC.md): explicit null states, all eight evolution equations, a translation table, energy/clock diagnostics, and a future information task.
+- [`models/feedback_null_v01/run.py`](models/feedback_null_v01/run.py) and [`RESULTS.md`](models/feedback_null_v01/RESULTS.md): executable controls and their recorded interpretation.
+- [`self-reference-frontier-2026-09-10.md`](self-reference-frontier-2026-09-10.md): the user's self-reference/emptiness interpretation and its candidate logical and physical counterparts.
 - [`RESEARCH-INTENT.md`](RESEARCH-INTENT.md): the user's clarified physical motivation and its relationship to the narrower first experiments.
 - [`research-audit-2026-09-10.md`](research-audit-2026-09-10.md): evidence audit, corrections, source comparison, and the status of each hypothesis.
 - [`novelty-review-2026-09-10.md`](novelty-review-2026-09-10.md): nearest prior work, an elementary exact calculation, and candidate contributions whose novelty remains to be established.
@@ -50,4 +54,4 @@ The public source account associated with this hypothesis is [@dorian_x10](https
 
 ## Suggested next step
 
-Specify and derive the two-mode/resource/probe model in the [active plan](NEXT-STEPS.md#next-deliverable-the-smallest-inspectable-physical-model). Establish energy accounting, clocks, and observer response before testing the proposed coherence–accessibility relation. Reproduce the elementary new controls with `python3 audit/check_energy_clock_controls.py`; the older prediction controls remain available with `python3 audit/check_sanity.py`.
+Run `python3 models/feedback_null_v01/run.py` and inspect the [model results](models/feedback_null_v01/RESULTS.md). The next quantitative task is the four-preparation observation experiment specified in the model, with the larger coherence/accessibility comparison governed by the [active plan](NEXT-STEPS.md). Reproduce the elementary exact controls with `python3 audit/check_energy_clock_controls.py`.

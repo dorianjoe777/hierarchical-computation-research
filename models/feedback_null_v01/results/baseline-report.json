@@ -1,0 +1,158 @@
+{
+  "model": "feedback_null_v01",
+  "runtime": {
+    "python": "3.14.4",
+    "numpy": "2.4.1"
+  },
+  "status": "baseline consistency checks passed",
+  "parameters": {
+    "kappa": 0.8,
+    "rho": 0.25,
+    "eta": 0.2,
+    "gamma": [
+      0.01,
+      0.01,
+      0.005,
+      0.04
+    ]
+  },
+  "duration": 100,
+  "primary_step": 0.01,
+  "refined_step": 0.005,
+  "max_state_and_dissipation_step_refinement_error": 1.3315187466500511e-08,
+  "max_local_power_identity_error": 4.163336342344337e-17,
+  "ideal_meter_output_observability_rank_numerical": 8,
+  "max_pair_state_difference_due_to_meter": 0.7056502641563642,
+  "cases": {
+    "baseline": {
+      "initial_energy": 0.625,
+      "final_energy": 0.13362839762377832,
+      "dissipated_energy": 0.49137160242001937,
+      "max_energy_budget_error": 4.533928787964214e-11,
+      "max_local_pair_energy": 0.33642109221982386,
+      "first_local_activation_above_1e-4": 0.06,
+      "max_absolute_meter_record": 0.6488531978971545,
+      "held_local_quiet_intervals": [],
+      "reactivations_after_held_quiet": 0,
+      "collective_positive_crossing_times": [
+        5.662630752023651,
+        11.497740402037861,
+        17.211684155213074,
+        22.948211278052195,
+        28.596606336848254,
+        33.96209463039747,
+        38.306727306139116,
+        43.58636245626983,
+        49.18898817502667,
+        54.912335498257555,
+        60.580248402002255,
+        66.31812634212055,
+        71.40258140029972,
+        75.28553054192811,
+        80.91876248639858,
+        86.54708008904956,
+        92.29367318225046,
+        97.8844324790666
+      ],
+      "gross_boundary_transfer_integral": 2.1888731279066698,
+      "tracking_residual_integral": 9.480114000514089,
+      "largest_real_part_dynamics_eigenvalues": -0.005096017351936611
+    },
+    "meter_disconnected": {
+      "initial_energy": 0.625,
+      "final_energy": 0.3016161397901055,
+      "dissipated_energy": 0.32338386016920107,
+      "max_energy_budget_error": 4.119082852582778e-11,
+      "max_local_pair_energy": 0.4656909104576479,
+      "first_local_activation_above_1e-4": 0.06,
+      "max_absolute_meter_record": 0.0,
+      "held_local_quiet_intervals": [],
+      "reactivations_after_held_quiet": 0,
+      "collective_positive_crossing_times": [
+        5.7757575007199735,
+        11.64910880253358,
+        17.45576948466472,
+        23.29511325254699,
+        29.106552592753733,
+        34.93301962313763,
+        39.58618485427167,
+        43.64983061348927,
+        49.51179132298868,
+        55.30982637136165,
+        61.14183536185081,
+        66.94787967747249,
+        72.75945895231212,
+        78.38962514021257,
+        81.57431098790633,
+        87.38437288427077,
+        93.16867215145176,
+        98.99288985603842
+      ],
+      "gross_boundary_transfer_integral": 2.552836447334951,
+      "tracking_residual_integral": 6.066773217123088,
+      "largest_real_part_dynamics_eigenvalues": -0.003373048771337943
+    },
+    "conservative": {
+      "initial_energy": 0.625,
+      "final_energy": 0.6249999997605076,
+      "dissipated_energy": 0.0,
+      "max_energy_budget_error": 2.394924258908304e-10,
+      "max_local_pair_energy": 0.44120136048427555,
+      "first_local_activation_above_1e-4": 0.06,
+      "max_absolute_meter_record": 0.9098940041048306,
+      "held_local_quiet_intervals": [],
+      "reactivations_after_held_quiet": 0,
+      "collective_positive_crossing_times": [
+        5.662263100160386,
+        11.500492103451723,
+        17.218281889669196,
+        22.960098251152655,
+        28.604894157856087,
+        33.77926825011158,
+        37.98319730016449,
+        43.47086102686017,
+        49.14779952044594,
+        54.899224694102266,
+        60.60224853484406,
+        66.392942359931,
+        71.44010434709506,
+        75.10922630734723,
+        80.86709142048909,
+        86.556545766608,
+        92.34646822762264,
+        98.0031804838308
+      ],
+      "gross_boundary_transfer_integral": 3.843758857337616,
+      "tracking_residual_integral": 20.278814499733773,
+      "largest_real_part_dynamics_eigenvalues": 4.991348168015404e-17
+    },
+    "global_null": {
+      "initial_energy": 0.0,
+      "final_energy": 0.0,
+      "dissipated_energy": 0.0,
+      "max_energy_budget_error": 0.0,
+      "max_local_pair_energy": 0.0,
+      "first_local_activation_above_1e-4": null,
+      "max_absolute_meter_record": 0.0,
+      "held_local_quiet_intervals": [
+        [
+          0.0,
+          100.0
+        ]
+      ],
+      "reactivations_after_held_quiet": 0,
+      "collective_positive_crossing_times": [],
+      "gross_boundary_transfer_integral": 0.0,
+      "tracking_residual_integral": 0.0,
+      "largest_real_part_dynamics_eigenvalues": -0.005096017351936611
+    }
+  },
+  "limits": [
+    "Dimensionless classical analogue; parameter choices are illustrative.",
+    "Damping exports energy to an unmodeled passive environment, recorded as Q.",
+    "No forced restart; no autonomous logical certificate controller.",
+    "Clock events use an already specified time parameter.",
+    "The four-preparation noisy inference task has not been executed.",
+    "No physical measurement, quantum derivation, or cosmological conclusion."
+  ]
+}

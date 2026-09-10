@@ -2,6 +2,8 @@
 
 **Working revision: 10 September 2026.** Conceptual motivation: [@dorian_x10](https://x.com/dorian_x10). The mathematical choices and elementary deductions below are an assistant-developed proposal for testing the user's idea. They are not a derivation of that idea from established physics, or a claim of novelty.
 
+**Implementation update:** [working model v0.1](models/feedback_null_v01/SPEC.md) now fixes all eight differential equations and initial parameters, translates the null-state/self-reference visualization into candidate observables, and supplies [executed deterministic controls](models/feedback_null_v01/RESULTS.md). The noisy observation experiment and broader hierarchy remain future work. The [foundations overview](FOUNDATIONS-OVERVIEW.md) consolidates the current position.
+
 The core question is: **under what dynamics can internal interactions produce a persistent collective unit, and how does that organization change the microscopic detail an interacting observer can obtain at a specified cost?** Asymmetry, available potential, completion, and temporal organization are part of this question from the beginning.
 
 The newest manuscript is preserved verbatim in the local research workspace; its [provenance record](manuscripts/2026-09-10-asymmetry-clock-ram-provenance.json) identifies the exact bytes. This document interprets it without replacing it. Read the [physical assessment](physics-frontier-assessment-2026-09-10.md) for the intended quantum and relativistic applications. The earlier finite-state prediction study remains an optional calibration, not the organizing center of this work.
@@ -259,4 +261,4 @@ Stages 4 and 5 may exchange order if a two-level analytical result is needed to 
 
 The first publishable outcome may be a precise conditional result or counterexample. Novelty requires comparison with observability theory, synchronization, thermodynamics of clocks, and hierarchical emergence. A relabeled oscillator effect is a reproduction. Failure in this model limits this realization of the hypothesis; it neither disproves every possible realization nor justifies changing assumptions until a desired result appears.
 
-**Next executable task:** freeze the two-mode/resource/probe specification and derive its exact linear dynamics and observer response. The elementary controls above are the starting checks. The experiment, hierarchical extension, and quantum/relativistic derivations have not been executed by writing this plan.
+**Current executable model:** the two-mode/resource/probe equations and deterministic controls are implemented in v0.1. The next quantitative task is its specified four-preparation observation experiment. The hierarchical extension, internal logical-certification controller, and quantum/relativistic derivations have not been executed by writing this plan.
