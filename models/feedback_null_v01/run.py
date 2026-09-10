@@ -196,7 +196,7 @@ def main():
                             d['resource_power'], d['meter_power'], d['qplus'], d['pplus'], d['eplus']])
     assert rows.shape[1] == len(columns)
     with (out/'baseline-trajectory.csv').open('w', newline='') as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator='\n')
         writer.writerow(columns)
         writer.writerows([[format(float(x), '.10g') for x in row] for row in rows[::10]])
     print(json.dumps({key: value for key, value in report.items() if key != 'cases'}, indent=2))
