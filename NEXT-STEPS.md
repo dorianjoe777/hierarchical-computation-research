@@ -2,6 +2,8 @@
 
 **Adopted:** 10 September 2026. Read the [reassessment](research-audit-2026-09-10.md) for evidence and corrections. This plan replaces the old percentage allocations, seven-day schedule, fluid-proof-first dependency, and parallel SAT/quantum experiments. Historical scope files remain unchanged.
 
+**Novelty checkpoint:** the [targeted literature review](novelty-review-2026-09-10.md) finds direct precedent for recursive predictive compression and multistage information processing. The first two milestones are baseline work. Adding memory, an online update, or another hierarchy level is not itself a new contribution; a specific gap must be established before making that claim.
+
 ## The question we will actually investigate
 
 For a small interacting system, **which information must a limited observer retain to predict a fixed boundary observable, and what accuracy is lost when storage or observation frequency is reduced?**
@@ -71,6 +73,8 @@ First make a compact plot/table of prediction loss against actual storage, with 
 Then choose **one** limited extension justified by the baseline results: for example, a recursively updateable summary with fewer states than the available history, or a precise counterexample showing why a proposed summary cannot work. State its rule before evaluation.
 
 Compare directly with the applicable results in [predictive-state theory](https://arxiv.org/abs/cond-mat/9907176), [higher-order lumpability](https://arxiv.org/abs/1212.4375), and [higher-order Markov aggregation](https://arxiv.org/abs/1608.04637). A change of vocabulary or an expected memory effect is not a new theorem.
+
+The comparison must also include [recursive information bottlenecks](https://www.mdpi.com/1099-4300/16/2/968), [causal rate-distortion](https://arxiv.org/abs/1412.2859), and, if extending across representation levels, [successive refinement](https://pmc.ncbi.nlm.nih.gov/articles/PMC10528077/). For any proposed online algorithm, include a known-model Bayesian filter using the same observations and count its precision/storage cost separately from the privileged full-state oracle. The novelty review gives a candidate finite-state-observer optimization problem; its literature gap is still unconfirmed.
 
 If a learned method is introduced, use independent trajectories for training, validation and test; freeze its choices before testing; report several independent seeds and uncertainty intervals. Avoid overlapping history windows across data splits. Keep the exact matrix calculation as the reference. Report encoder/training cost as well as inference cost, and show performance away from the parameters used to select the method.
 
