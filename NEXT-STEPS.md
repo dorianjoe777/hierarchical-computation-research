@@ -4,6 +4,10 @@
 
 **Novelty checkpoint:** the [targeted literature review](novelty-review-2026-09-10.md) finds direct precedent for recursive predictive compression and multistage information processing. The first two milestones are baseline work. Adding memory, an online update, or another hierarchy level is not itself a new contribution; a specific gap must be established before making that claim.
 
+**Guiding intention:** [RESEARCH-INTENT.md](RESEARCH-INTENT.md) preserves the user's proposed connection between internal feedback, scale-relative uncertainty and an eleven-dimensional structure. The finite benchmark addresses only a precursor. A possible application toward quantum uncertainty and quantum/relativistic descriptions remains a medium- to long-term objective, contingent on developing and testing the mechanism.
+
+Human–AI implications and other speculative boundary applications do not drive this cycle. Evaluate each immediate task by how it tests or clarifies the core mechanism, including the distinction between physically constrained access and an analyst's chosen compression.
+
 ## The question we will actually investigate
 
 For a small interacting system, **which information must a limited observer retain to predict a fixed boundary observable, and what accuracy is lost when storage or observation frequency is reduced?**

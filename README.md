@@ -8,6 +8,8 @@ This repository records a research program developed from the hypothesis that co
 
 **Start with the [scientific reassessment](research-audit-2026-09-10.md) and [active execution plan](NEXT-STEPS.md).** They supersede the original effort weights and seven-day schedule. The current priority is a finite-state study of predictive coarse-graining, retained memory, and sampling cost. The broad physical hypotheses remain unvalidated; the repository now includes small exact controls, with no claim of a new theorem or experimental discovery.
 
+The [original research intention](RESEARCH-INTENT.md) places that benchmark within a broader hypothesis: internal feedback, coherent organization and scale-relative uncertainty may be related across the user's proposed eleven-dimensional structure. Investigating a possible connection to quantum uncertainty is an explicit medium- to long-term objective; it has not yet been derived.
+
 The first version is a disciplined program of work rather than a completed theory. Its central questions are:
 
 - When does a coarse-graining map produce a closed or approximately closed effective dynamics?
@@ -18,6 +20,7 @@ The first version is a disciplined program of work rather than a completed theor
 
 ## Contents
 
+- [`RESEARCH-INTENT.md`](RESEARCH-INTENT.md): the user's clarified physical motivation and its relationship to the narrower first experiments.
 - [`research-audit-2026-09-10.md`](research-audit-2026-09-10.md): evidence audit, corrections, source comparison, and the status of each hypothesis.
 - [`novelty-review-2026-09-10.md`](novelty-review-2026-09-10.md): nearest prior work, an elementary exact calculation, and candidate contributions whose novelty remains to be established.
 - [`NEXT-STEPS.md`](NEXT-STEPS.md): the active finite-model specification and milestones, baselines, and stopping rules.
